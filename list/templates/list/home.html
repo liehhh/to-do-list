@@ -1,0 +1,11 @@
+{% extends "list/base.html" %}
+{% block content %}
+    {% for item in items %}
+    <h2>{{ item.title }} - due - {{ item.deadline|date:"d-m-Y" }}</h2>
+    <h3>{{ item.description }}</h3>
+    <a href="{% url 'list-remove' item.pk %}">Delete</a>
+    {% endfor %}
+    <div>
+        <a href="{% url 'list-add' %}">Add Item</a>
+    </div>
+{% endblock content %}
