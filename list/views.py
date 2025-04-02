@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseNotAllowed
 from .models import List
 from .forms import ListForm
-
+# dusty pigeons man
 
 def home(request):
     context = {
